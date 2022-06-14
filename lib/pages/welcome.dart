@@ -8,7 +8,7 @@ class Welcome extends StatefulWidget {
 }
 
 class _WelcomeState extends State<Welcome> {
-  List images = ["a.jpg", "b.jpg", "c.png"];
+  List images = ["a.png", "b.png", "c.png"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +22,8 @@ class _WelcomeState extends State<Welcome> {
               decoration: BoxDecoration(
                   image: DecorationImage(
                       // ignore: prefer_interpolation_to_compose_strings
-                      image: AssetImage("img/" + images[index]))),
+                      image: AssetImage("img/" + images[index]),
+                      fit: BoxFit.cover)),
             );
           }),
     );
