@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes/pages/nav/main_page.dart';
 import 'package:notes/pages/welcome.dart';
 
 void main() {
@@ -36,7 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.blue),
       // ignore: prefer_const_constructors
-      home: Welcome(),
+      // home: Welcome()
+      home: MainPage(),
     );
   }
 }
