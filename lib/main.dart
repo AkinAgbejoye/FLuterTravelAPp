@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:notes/cubits/app_cubit_logic.dart';
+import 'package:notes/cubits/app_cubits.dart';
+import 'package:notes/pages/details_page.dart';
 import 'package:notes/pages/nav/main_page.dart';
 import 'package:notes/pages/welcome.dart';
+import 'package:notes/services/data-services.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,11 +39,14 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.blue),
-      // ignore: prefer_const_constructors
-      // home: Welcome()
-      home: MainPage(),
-    );
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(primarySwatch: Colors.blue),
+        // ignore: prefer_const_constructors
+        // home: Welcome()
+        // home: MainPage(),
+        home: BlocProvider<AppCubits>(
+          create: (context) => AppCubits(data: DataServices()),
+          child: AppCubitLogic(),
+        ));
   }
 }

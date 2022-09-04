@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:notes/pages/nav/bar_item_page.dart';
-import 'package:notes/pages/nav/home_page.dart';
+import 'package:notes/pages/home_page.dart';
 import 'package:notes/pages/nav/my_page.dart';
 import 'package:notes/pages/nav/serch_page.dart';
 
